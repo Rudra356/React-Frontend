@@ -190,3 +190,62 @@ th.tasklistheaderclass{
 .delete:hover {
   color: #fd0000; /* Darker blue on hover */
 }
+nav{
+  background-image: linear-gradient(to bottom, #092436 18%, #232527 82%);
+}
+/* Find button */
+/* Normal button state */
+.btnxx {
+  color: #ff6347;
+  border: 1px solid #ff6347;
+  font-weight: 900;
+  background-color: transparent; /* Ensure no background by default */
+}
+
+/* Hover state */
+.btnxx:hover {
+  color: #092436;
+  background-color: #ff6347;
+  border: 1px solid #ff6347;
+  font-weight: 900;
+}
+
+/* Active state (when clicked) */
+.btnxx:active {
+  color: #ff6347; /* Keep the same color as the normal state */
+  background-color: transparent; /* Ensure background stays transparent */
+  border: 1px solid #ff6347;
+  font-weight: 900;
+}
+
+#searchid{
+  /* border:1px solid #ff6347; */
+  color:#ff6347;
+  box-shadow: 2px 2px 1px #ff6347;
+  font-weight: 600;font-family: cursive;
+  font-family: cursive;
+  padding: auto ;
+}
+.container-fluid{
+  max-height:min-content;
+}
+.flex{
+  margin: 0;
+  box-shadow: 4px 6px 10px #cf4b23;
+}
+.form-control{
+border: none;
+border-bottom: 1px solid #cf4b23;
+border-right: 1px solid #cf4b23;
+}
+.form-control:focus, .form-control:active{
+  
+  box-shadow: 2px 3px 4px #cf4b23; 
+  border-bottom: 1px solid #cf4b23;
+  border-right: 1px solid #cf4b23;
+  outline: none;
+}
+
+.fw-bold{
+  background-image: linear-gradient(to right, #154e74 40%, #cf4b23); 
+  }
