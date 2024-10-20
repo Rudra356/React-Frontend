@@ -1,3 +1,5 @@
+<p> <strong>20-10-2024 19:08 : </strong> Have uploaded the complete FRONTEND of my Task Studio project and allthough it was fully functional I'm trying to add some extra features as I want to make it a Car Maintainance Scheduler App... </p><br>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
