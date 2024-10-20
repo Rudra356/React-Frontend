@@ -1,0 +1,105 @@
+/* NAV brand  */
+.navbar-brand{
+    font-weight: 100;
+    font-size: 35px;
+    margin: 0 10px 0 10px;
+    padding:0;
+    font-family: "Protest Strike", sans-serif;
+    /* Animation for color change */
+    animation: color-change 7.5s infinite alternate;
+}
+
+/* Keyframes for color change animation */
+@keyframes color-change {
+    0% {
+        color: #FF9933;
+        /* Base color */
+    }
+    25% {
+        color: #FF6347; 
+    }
+    50% {
+        color: #FFD700; 
+    }
+    75% {
+        color: #1E90FF; 
+    }
+    100% {
+        color: #32CD32; 
+    }
+}
+/* Remove the border, background, and shadow from the toggler button */
+.navbar-toggler {
+    border: none;       
+    background: none;    
+    border: 1.5px solid #066;   
+    padding: auto;        
+    outline: none;      
+    box-shadow: none ;  
+    border-left: .5px solid #066;
+    border-top: .5px solid #066; margin-right: 12px;
+}
+/* Remove the border, background, and shadow from the toggler button wheen on focus*/
+.navbar-toggler:focus {
+    outline: none;      
+    box-shadow: none;    /* Ensure no box shadow appears */
+}
+
+.navbar-toggler:hover {
+    outline: none;      
+    box-shadow: 2px 2px 4px #066 ; 
+}
+/* Icon styling */
+.material-symbols-outlined {
+    color: #099; 
+    font-size: 30px; 
+    margin: 0;
+}
+/*For NavbAR  links [HOME,ADD+,ABOUT US]*/
+.navbar-nav .nav-link.active {
+    color:#666;
+    font-weight: 400;
+    font-size: 20px;
+    font-family: "Protest Strike";
+}
+
+/*For NavbAR  links hover [HOME,ADD+,ABOUT US]*/
+.navbar-nav .nav-link.active:hover{
+    color:#bbb;
+    font-weight: 400;
+    font-family: "Protest Strike", sans-serif;
+}
+nav{
+    background-image: linear-gradient(to bottom, #092436 18%, #232527 82%);
+}
+/* Find button */
+/* Normal button state */
+.btnxx {
+    color: #ff6347;
+    border: 1px solid #ff6347;
+    font-weight: 900;
+    background-color: transparent; /* Ensure no background by default */
+}
+
+/* Hover state */
+.btnxx:hover {
+    color: #092436;
+    background-color: #ff6347;
+    border: 1px solid #ff6347;
+    font-weight: 900;
+}
+
+/* Active state (when clicked) */
+.btnxx:active {
+    color: #ff6347; /* Keep the same color as the normal state */
+    background-color: transparent; /* Ensure background stays transparent */
+    border: 1px solid #ff6347;
+}
+
+#searchid{
+    /* border:1px solid #ff6347; */
+    color:#ff6347;
+    box-shadow: 2px 2px 1px #ff6347;
+    font-weight: 800;font-family: cursive;
+    font-family: cursive;
+}

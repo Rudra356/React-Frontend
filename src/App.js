@@ -1,24 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Nav from './Components/Nav';
+import AddTask from './Components/AddTask';
+import TaskList from './Components/TaskList';
+import UpdatedTask from './Components/UpdatedTask';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import 'font-awesome/css/font-awesome.min.css';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Nav /> 
+        <Routes>      
+          {/* <Route path="/" element={<TaskList />} /> */}
+          <Route path="/TaskList" element={<TaskList />} />
+          <Route path="/AddTask" element={<AddTask />} />
+          {/* <Route path='/UpdatedTask/:taskId' element={<UpdatedTask/>}/>  */}          
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
