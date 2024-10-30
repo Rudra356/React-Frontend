@@ -4,17 +4,29 @@ import TaskService from "../TaskServides/TaskService";
 
 function AddTask() {
   const [task, setTask] = useState({
-    taskName: "",
-    taskTime: "",
-    taskDate: "",
+    spareName: "",
+    rc: "",
+    issue: "",
+    brandModel: "",
+    price: "",
+    currentKM: "",
+    replacingDate: "",
+    upcomingCheckUpKM: "",
+    extraNotes: "",
   });
 
   const reset = (e) => {
     e.preventDefault();
     setTask({
-      taskName: "",
-      taskTime: "",
-      taskDate: "",
+      spareName: "",
+      rc: "",
+      issue: "",
+      brandModel: "",
+      price: "",
+      currentKM: "",
+      replacingDate: "",
+      upcomingCheckUpKM: "",
+      extraNotes: "",
     });
   };
 
@@ -42,47 +54,126 @@ function AddTask() {
       <form className="flex mx-5 my-5 bg-dark rounded-3">
         <div className="mx-4 py-5">
           <p className="fw-bold text-white text-center rounded py-3">
-            ADD NEW TASKS HERE
+            ADD NEW RECORDS HERE
           </p>
 
-          <label htmlFor="TaskName" className="form-label text-white">
-            Task Name
+          <label htmlFor="spareName" className="form-label text-white">
+            Spare Name
           </label>
           <input
-            id="TaskName"
-            name="taskName"
+            id="spareName"
+            name="spareName"
             className="form-control my-2 py-1"
             type="text"
-            value={task.taskName}
-            onChange={(e) => handleChange(e)}
-            placeholder={"Your next step here"}
+            value={task.spareName}
+            onChange={handleChange}
+            placeholder={"Enter spare name"}
             required
           />
 
-          <label htmlFor="TaskDate" className="form-label text-white">
-            Task Date
+          <label htmlFor="rc" className="form-label text-white">
+          RC
           </label>
           <input
-            id="TaskDate"
-            name="taskDate"
+            id="rc"
+            name="rc"
+            className="form-control my-2 py-1"
+            type="text"
+            value={task.rc}
+            onChange={handleChange}
+            placeholder={"Registration No. here"}
+            required
+          />
+
+          <label htmlFor="issue" className="form-label text-white">
+            Issue
+          </label>
+          <input
+            id="issue"
+            name="issue"
+            className="form-control my-2 py-1"
+            type="text"
+            value={task.issue}
+            onChange={handleChange}
+            placeholder={"Describe the issue"}
+          />
+
+          <label htmlFor="brandModel" className="form-label text-white">
+            Brand & Model
+          </label>
+          <input
+            id="brandModel"
+            name="brandModel"
+            className="form-control my-2 py-1"
+            type="text"
+            value={task.brandModel}
+            onChange={handleChange}
+            placeholder={"Enter brand and model"}
+          />
+
+          <label htmlFor="price" className="form-label text-white">
+            Price
+          </label>
+          <input
+            id="price"
+            name="price"
+            className="form-control my-2 py-1"
+            type="number"
+            value={task.price}
+            onChange={handleChange}
+            placeholder={"Enter price"}
+            required
+          />
+
+          <label htmlFor="currentKM" className="form-label text-white">
+            Current KM
+          </label>
+          <input
+            id="currentKM"
+            name="currentKM"
+            className="form-control my-2 py-1"
+            type="number"
+            value={task.currentKM}
+            onChange={handleChange}
+            placeholder={"Enter current KM"}
+          />
+
+          <label htmlFor="replacingDate" className="form-label text-white">
+            Replacing Date
+          </label>
+          <input
+            id="replacingDate"
+            name="replacingDate"
             className="form-control my-2 py-1"
             type="date"
-            value={task.taskDate}
-            onChange={(e) => handleChange(e)}
+            value={task.replacingDate}
+            onChange={handleChange}
+          />
+
+          <label htmlFor="upcomingCheckUpKM" className="form-label text-white">
+            Upcoming Check-Up KM
+          </label>
+          <input
+            id="upcomingCheckUpKM"
+            name="upcomingCheckUpKM"
+            className="form-control my-2 py-1"
+            type="number"
+            value={task.upcomingCheckUpKM}
+            onChange={handleChange}
+            placeholder={"Enter upcoming check-up KM"}
             required
           />
 
-          <label htmlFor="TaskTime" className="form-label text-white">
-            Task Time
+          <label htmlFor="extraNotes" className="form-label text-white">
+            Extra Notes
           </label>
-          <input
-            id="TaskTime"
-            name="taskTime"
+          <textarea
+            id="extraNotes"
+            name="extraNotes"
             className="form-control my-2 py-1"
-            type="time"
-            value={task.taskTime}
-            onChange={(e) => handleChange(e)}
-            required
+            value={task.extraNotes}
+            onChange={handleChange}
+            placeholder={"Enter any extra notes"}
           />
 
           <div className="text-center">

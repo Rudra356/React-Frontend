@@ -2,28 +2,30 @@ import React, { useEffect, useState } from 'react';
 import TaskService from '../TaskServides/TaskService';
 import 'font-awesome/css/font-awesome.min.css';
 import { useNavigate } from 'react-router-dom';
-function TaskList() {
 
+function TaskList() {
   const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(true);
-  const navigate =  useNavigate();
+  const navigate = useNavigate();
 
-  const deleteTaskById = (e,taskId) => {
+  const deleteTaskById = (e, taskId) => {
     e.preventDefault();
     TaskService.deleteTaskById(taskId)
-    .then(()=>{
-      if(tasks){
-      setTasks((prevElement) =>{
-        return prevElement.filter((task)=>task.taskId !== task);
+      .then(() => {
+        setTasks((prevElement) => {
+          return prevElement.filter((task) => task.MId !== taskId); // Update this line to check by MId
+        });
+        navigate("/TaskList");
       })
-    }navigate("/TaskList");
-    })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
-  const updateTaskById = (e,taskId)=>{
+  const updateTaskById = (e, taskId) => {
     e.preventDefault();
-    navigate(`/UpdatedTask/${taskId}`)
-  }
+    navigate(`/UpdatedTask/${taskId}`);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -44,28 +46,42 @@ function TaskList() {
       <table className='display table table-responsive-md table-hover'>
         <thead className='text-center'>
           <tr>
-            {/* <th className='tasklistheaderclass'> TaskID</th> */}
-            <th className='tasklistheaderclass'> Name</th>
-            <th className='tasklistheaderclass'> Time</th>
-            <th className='tasklistheaderclass'> Date</th>
+            <th className='tasklistheaderclass'> Spare Name</th>
+            <th className='tasklistheaderclass'> RC</th>
+            <th className='tasklistheaderclass'> Issue</th>
+            <th className='tasklistheaderclass'> Brand & Model</th>
+            <th className='tasklistheaderclass'> Price</th>
+            <th className='tasklistheaderclass'> Current KM</th>
+            <th className='tasklistheaderclass'> Replacing Date</th>
+            <th className='tasklistheaderclass'> Upcoming Check-Up KM</th>
+            <th className='tasklistheaderclass'> Extra Notes</th>
             <th className='tasklistheaderclass'> Action</th>
           </tr>
         </thead>
         {!loading && (
           <tbody className='text-center'>
             {tasks.map((task) => (
-              <tr key={task.taskId}>
-                {/* <td className='tasklistbodyclass'>{task.taskId}</td> */}
-                <td className='tasklistbodyclass'>{task.taskName}</td>
-                <td className='tasklistbodyclass'>{task.taskTime}</td>
-                <td className='tasklistbodyclass'>{task.taskDate}</td>
+              <tr key={task.MId}>
+                <td className='tasklistbodyclass'>{task.spareName}</td>
+                <td className='tasklistbodyclass'>{task.rc}</td>
+                <td className='tasklistbodyclass'>{task.issue}</td>
+                <td className='tasklistbodyclass'>{task.brandModel}</td>
+                <td className='tasklistbodyclass'>{task.price}</td>
+                <td className='tasklistbodyclass'>{task.currentKM}</td>
+                <td className='tasklistbodyclass'>{task.replacingDate}</td>
+                <td className='tasklistbodyclass'>{task.upcomingCheckUpKM}</td>
+                <td className='tasklistbodyclass'>{task.extraNotes}</td>
                 <td className='tasklistbodyclass'>
-                  <a className='edit' disabled>
-                     <i className="fas fa-edit"></i> 
-                  </a>
+                  {/* <a 
+                    onClick={(e) => updateTaskById(e, task.MId)} 
+                    className='edit'>
+                    <i className="fas fa-edit"></i>
+                  </a> */}
                   <a 
-                  onClick={(e,taskId) => deleteTaskById(e,task.taskId)}
-                  className='delete'><i className="fas fa-trash-alt"></i></a>
+                    onClick={(e) => deleteTaskById(e, task.MId)} 
+                    className='delete'>
+                    <i className="fas fa-trash-alt"></i>
+                  </a>
                 </td>
               </tr>
             ))}
