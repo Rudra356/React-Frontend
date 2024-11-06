@@ -47,32 +47,32 @@ function TaskList() {
       <table id="taskTable" className='display table table-responsive-md table-hover'>
         <thead className='text-center'>
           <tr>
-            <th>Spare Name</th>
-            <th>RC</th>
-            <th>Issue</th>
-            <th>Brand & Model</th>
-            <th>Price</th>
-            <th>Current KM</th>
-            <th>Replacing Date</th>
-            <th>Upcoming Check-Up KM</th>
-            <th>Extra Notes</th>
+            <th title='Spare Name'>Spare </th>
+            <th title='Vehicle Number'>RC</th>
+            <th title='Issues Faced'>Issue</th>
+            <th title='Spare Brand & Model'>Brand </th>
+            <th title='Spare Price'>Price</th>
+            <th title='Current Meter Reading'>ODO</th>
+            <th title='Spare Fix Date'>Fixing Date</th>
+            <th title='Next checkup in KM'>Next CheckUp</th>
+            <th title='Extra Notes'>Add Note</th>
             <th>Action</th>
           </tr>
         </thead>
         <tbody className='text-center'>
           {tasks.map((task) => (
             <tr key={task.MId}>
-              <td>{task.spareName}</td>
-              <td>{task.rc}</td>
-              <td>{task.issue}</td>
-              <td>{task.brandModel}</td>
-              <td>{task.price}</td>
-              <td>{task.currentKM}</td>
-              <td>{task.replacingDate}</td>
-              <td>{task.upcomingCheckUpKM}</td>
-              <td>{task.extraNotes}</td>
+              <td title='Spare Name'>{task.spareName}</td>
+              <td title='Vehicle Number'>{task.rc}</td>
+              <td title='Issues Faced'>{task.issue}</td>
+              <td title='Spare Brand & Model'>{task.brandModel}</td>
+              <td title='Spare Price'>{task.price}</td>
+              <td title='Current Meter Reading'>{task.currentKM}</td>
+              <td title='Spare Fix Date'>{task.replacingDate}</td>
+              <td title='Next checkup in KM'>{task.upcomingCheckUpKM}</td>
+              <td title='Extra Notes'>{task.extraNotes}</td>
               <td>
-                <a onClick={(e) => deleteTaskById(e, task.MId)} className='delete'>
+                <a onClick={(e) => deleteTaskById(e, task.MId)} className='delete' title='Delete Record'>
                   <i className="fas fa-trash-alt"></i>
                 </a>
               </td>

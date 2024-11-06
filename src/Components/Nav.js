@@ -25,26 +25,26 @@ const Nav = () => {
             className="navbar-nav me-auto my-1 my-sm-0 navbar-nav-scroll"
             >
             <li className="nav-item px-3">
-              <a className="nav-link active" aria-current="page"
+              <a className="nav-link active" aria-current="page"  title=''
               onClick={()=>navigate("/TaskList")}>
                 Home
               </a>
             </li>
             <li className="nav-item px-3 ">
-              <a className="nav-link active"
+              <a className="nav-link active" title='Learn more about us!'
               // onClick={()=>navigate("/TaskList")}
               >
                 About Us
               </a>
             </li>
             <li className="nav-item px-3">
-              <a className="nav-link active" 
+              <a className="nav-link active" title='For Adding New Record'
               onClick={()=>navigate("/AddTask")}>
                 Add Schedule
               </a>
             </li>
             <li className="nav-item px-3">
-              <a className="nav-link active" 
+              <a className="nav-link" id='la' title='Disabled'
               // onClick={()=>navigate("/AddTask")}
               >
                 Add New Registartion
@@ -52,7 +52,7 @@ const Nav = () => {
             </li>
             
           </ul>
-          <form className="d-flex px-3 " role="search">
+          {/* <form className="d-flex px-3 " role="search">
             <input
               className="form-control me-3"
               type="search"
@@ -62,8 +62,8 @@ const Nav = () => {
             />
             <button className="btnxx rounded px-3 " type="submit">
               Find
-            </button>
-          </form>
+            </button> 
+          </form>*/}
         </div>
       </div>
     </nav>
