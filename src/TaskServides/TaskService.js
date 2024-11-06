@@ -7,14 +7,19 @@ class TaskService{
     getAllTask(){
         return axios.get(BASE_URL);
     }
-    getTaskById(taskId){
-        return axios.get(BASE_URL+"/"+taskId);
+    getTaskById(MId){
+        return axios.get(BASE_URL+"/"+MId);
     }
-    deleteTaskById(taskId){
-        return axios.delete(BASE_URL+"/"+taskId);
+    deleteTaskById(MId){
+        return axios.delete(`${BASE_URL}/${encodeURIComponent(MId)}`, {
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+    }
     }
     // updateTaskById(task, taskId){
     //     return axios.put(BASE_URL+"/"+taskId,task);
     // }
-}
+
 export default new TaskService;

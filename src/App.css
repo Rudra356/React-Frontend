@@ -153,6 +153,7 @@ th.tasklistheaderclass{
   padding: 10px 0px;
   opacity: .95;
   border-bottom:2px solid #092436;
+  align-items: center;
  
 }
 
@@ -161,6 +162,7 @@ th.tasklistheaderclass{
   height:30px;
   background-color: #fff;opacity: .75;
   font-weight: 600;
+  text-align: center;
 }
 
 .taskTable{
@@ -249,3 +251,19 @@ border-right: 1px solid #cf4b23;
 .fw-bold{
   background-image: linear-gradient(to right, #154e74 40%, #cf4b23); 
   }
+
+  div.dt-container div.dt-layout-row {
+    background-color: #092436;
+    color:#12c773;
+
+  }
+
+  div.dt-container .dt-search input {
+    border: 1px solid #fc0303;
+    border-radius: 3px;
+    padding: 5px;
+    background-color: red;
+    color: red;
+    margin-left: 3px;
+    margin: 0px;
+}
