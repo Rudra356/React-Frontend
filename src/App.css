@@ -270,7 +270,7 @@ border-right: 1px solid #cf4b23;
     align-items: center;
     width: 98.3%;
     margin: 0px 10px;
-    background-color: #09243688;
+    background-image: linear-gradient(to left, #09243688 10%, #9194034f 80%);
     height: 35px;
     color:#FFF;
 }
