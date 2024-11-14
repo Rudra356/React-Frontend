@@ -78,20 +78,20 @@ body{
 /*For NavbAR  links [HOME,ADD+,ABOUT US]*/
 .navbar-nav .nav-link.active {
   color:#ffffff;
-  font-weight: 600;
+  font-weight: 200;
   font-size: 18px;cursor: pointer;
   font-family: "Protest Strike", sans-serif;
 }
 #la{
   color:#e9e6e63a;
-  font-weight: 600;
+  font-weight: 200;
   font-size: 18px;cursor: pointer;
   font-family: "Protest Strike";
 }
 /*For NavbAR  links hover [HOME,ADD+,ABOUT US]*/
 .navbar-nav .nav-link.active:hover{
   color:#ce7b00;
-  font-weight: 600;cursor: pointer;
+  font-weight: 200;cursor: pointer;
   font-family: "Protest Strike", sans-serif;
 }
 nav{
