@@ -177,10 +177,10 @@ function AddTask() {
           />
 
           <div className="text-center">
-            <button onClick={saveTask} className="btn btn-secondary ">
+            <button onClick={saveTask} className="btn btn-success ">
               Save
             </button>
-            <button onClick={reset} className="btn btn-outline-warning mx-1">
+            <button onClick={reset} className="btn btn-secondary mx-1">
               Clear
             </button>
             <button

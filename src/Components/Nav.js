@@ -6,7 +6,7 @@ const Nav = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-dark">
       <div className="container-fluid">
-        <a className="navbar-brand" >Ride<sup>Sync</sup></a>
+        <a className="navbar-brand" >RYDE<sup><em id='sync'>sync</em></sup></a>
         <button
           className="navbar-toggler"
           type="button"

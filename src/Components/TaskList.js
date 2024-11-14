@@ -52,7 +52,7 @@ function TaskList() {
             <th title='Issues Faced'>Issue</th>
             <th title='Spare Brand & Model'>Brand </th>
             <th title='Spare Price'>Price</th>
-            <th title='Current Meter Reading'>ODO</th>
+            <th title='Current Meter Reading'>Changed At [KM]</th>
             <th title='Spare Fix Date'>Fixing Date</th>
             <th title='Next checkup in KM'>Next CheckUp</th>
             <th title='Extra Notes'>Add Note</th>
