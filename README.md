@@ -1,3 +1,4 @@
+<p> <strong>14-11-2024 20:04 : </strong><br> Performed some major UI changes. </p><br>
 <p> <strong>06-11-2024 20:04 : </strong><br>  Added JQuery Datatable and removed the old one.<br> Added CSS styling to the datatable features added like pagingnation,auto-search,etc.<br> Changed the old background-image to a new one.</p><br>
 <p> <strong>20-10-2024 19:08 : </strong> Have uploaded the complete FRONTEND of my Task Studio project and allthough it was fully functional I'm trying to add some extra features as I want to make it a Car Maintainance Scheduler App... </p><br>
 
