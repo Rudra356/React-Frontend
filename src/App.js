@@ -11,7 +11,7 @@ function App() {
       <BrowserRouter>
         <Nav /> 
         <Routes>      
-          {/* <Route path="/" element={<TaskList />} /> */}
+          <Route path="/" element={<TaskList />} /> 
           <Route path="/TaskList" element={<TaskList />} />
           <Route path="/AddTask" element={<AddTask />} />
           {/* <Route path='/UpdatedTask/:taskId' element={<UpdatedTask/>}/>  */}          
