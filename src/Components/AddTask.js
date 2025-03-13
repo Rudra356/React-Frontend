@@ -139,7 +139,7 @@ function AddTask() {
           />
 
           <label htmlFor="replacingDate" className="form-label text-white">
-            Replacing Date
+            Fixing Date
           </label>
           <input
             id="replacingDate"

@@ -31,9 +31,9 @@ function TaskList() {
     }
   }, [loading]);
 
-  const deleteTaskById = (e, MId) => {
+  const  deleteTaskById =async (e, MId) => {
     e.preventDefault();
-    TaskService.deleteTaskById(MId)
+    await TaskService.deleteTaskById(MId)
       .then(() => {
         setTasks((prevTasks) => prevTasks.filter((task) => task.MId !== MId));
       })
@@ -56,7 +56,7 @@ function TaskList() {
             <th title='Spare Fix Date'>Fixing Date</th>
             <th title='Next checkup in KM'>Next CheckUp</th>
             <th title='Extra Notes'>Add Note</th>
-            <th>Action</th>
+            {/* <th>Action</th> */}
           </tr>
         </thead>
         <tbody className='text-center'>
@@ -71,11 +71,11 @@ function TaskList() {
               <td title='Spare Fix Date'>{task.replacingDate}</td>
               <td title='Next checkup in KM'>{task.upcomingCheckUpKM}</td>
               <td title='Extra Notes'>{task.extraNotes}</td>
-              <td>
+              {/* <td>
                 <a onClick={(e) => deleteTaskById(e, task.MId)} className='delete' title='Delete Record'>
                   <i className="fas fa-trash-alt"></i>
                 </a>
-              </td>
+              </td> */}
             </tr>
           ))}
         </tbody>

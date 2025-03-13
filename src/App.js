@@ -2,7 +2,6 @@ import './App.css';
 import Nav from './Components/Nav';
 import AddTask from './Components/AddTask';
 import TaskList from './Components/TaskList';
-import UpdatedTask from './Components/UpdatedTask';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import 'font-awesome/css/font-awesome.min.css';
 function App() {
