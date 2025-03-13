@@ -10,10 +10,10 @@ const About = () => {
       </div>
 
       {/* Mission Section */}
-      <section className="mission-section">
-        <h2>Our Mission</h2>
-        <p className="mission-text">
-          RydeSync is designed to help vehicle owners track their maintenance history effortlessly.
+      <section className="mission-section ">
+        <h2 className="fw-bold mb-4">Our Mission</h2>
+        <p className="mission-text mb-0 ">
+          <strong>RydeSync</strong> is designed to help vehicle owners track their maintenance history effortlessly.
           Stay ahead of issues, optimize performance, and keep your car in perfect condition.
         </p>
       </section>
@@ -22,12 +22,9 @@ const About = () => {
       <div className="features-section">
         <div className="feature-card">
           <h3>🚗 Smart Tracking</h3>
-          <p>Automatically log and track your vehicle's service history.</p>
+          <p>Log and track your vehicle's service history.</p>
         </div>
-        <div className="feature-card">
-          <h3>🔔 Maintenance Alerts</h3>
-          <p>Get reminders for oil changes, tire rotations, and more.</p>
-        </div>
+        
         <div className="feature-card">
           <h3>🔒 Secure Data</h3>
           <p>Your car data is encrypted and securely stored.</p>

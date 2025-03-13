@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restricted Access</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f8d7da;
+            color: #721c24;
+            padding-top: 20%;
+        }
+    </style>
+    <script>
+        function checkDevice() {
+            if (window.innerWidth >= 1024) {
+                window.location.href = "/"; // Redirect back to the main site
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", checkDevice);
+        window.addEventListener("resize", checkDevice);
+    </script>
+</head>
+<body>
+    <h2>⚠️ This site is only accessible on a PC or Laptop.</h2>
+    <p>Please switch to a larger screen.</p>
+</body>
+</html>
